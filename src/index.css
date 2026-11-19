@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lexend:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-50: #eef2ff;
+  --brand-600: #4f46e5;
+  --brand-700: #4338ca;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  @apply text-slate-900;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  background: #f7f8fc;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgb(99 102 241 / 35%);
+  outline-offset: 2px;
+}
+
+::selection {
+  color: #312e81;
+  background: #c7d2fe;
+}
+
+.font-display {
+  font-family: "Lexend", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@media print {
+  body.exam-active {
+    display: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3001}:3001"
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      RESULTS_FILE: /data/results.json
+      CORS_ORIGINS: ${CORS_ORIGINS:-}
+    volumes:
+      - eduvia-data:/data
+
+volumes:
+  eduvia-data:

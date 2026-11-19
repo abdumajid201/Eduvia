@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+
+.env
+.env.*
+!.env.example
+
+*.tsbuildinfo
+server/data/results.json
+server/data/recordings/
+
+.DS_Store
+Thumbs.db
+Desktop.ini
