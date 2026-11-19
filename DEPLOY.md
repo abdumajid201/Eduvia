@@ -2,6 +2,12 @@
 
 Loyiha frontend va Express API'ni bitta Node serveridan beradi. Ishlab chiqarish serverida Node.js 22 yoki Docker kerak.
 
+## Render orqali
+
+Root papkada `render.yaml` Blueprint bor. Render Dashboard'da **New → Blueprint** ni tanlab, `abdumajid201/Eduvia` GitHub repozitoriyasini va `main` branch'ni ulang. Blueprint xizmatni Dockerfile bilan bepul rejada va `/api/health` health-check bilan yaratadi. Frontend ham, API ham bitta `onrender.com` domenida ochiladi.
+
+Hozirgi bepul sozlama doimiy disk ishlatmaydi. Natijalar `/data/results.json` ichida shu ishga tushgan instance davomida yoziladi, ammo restart yoki redeploy bo'lganda yo'qolishi mumkin. Natija tarixini saqlash uchun Render'da pullik web service'ga persistent disk ulab, mount path'ni `/data` qiling. So'ng `RESULTS_FILE=/data/results.json` muhit o'zgaruvchisini saqlang. Render disklarining narxi va shartlarini deploy qilishdan oldin Render panelida tekshiring.
+
 ## Docker bilan
 
 1. Serverga loyihani olib boring va loyiha papkasida `.env.example` faylidan `.env` yarating.
